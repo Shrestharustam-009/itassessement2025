@@ -683,7 +683,7 @@ header {
 .download-image img {
   max-width: 100%;
   height: auto;
-  margin-top: -78px;
+  margin-bottom: -65px;
   margin-left: 200px;
 }
 

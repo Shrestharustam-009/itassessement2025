@@ -1,10 +1,10 @@
-// contact.js
+
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
-  // Initialize EmailJS with your public key
-  emailjs.init("06hEvHS1V_7z-LNuo"); // Replace with your own Public Key if different
+  // Initialize EmailJS with  public key
+  emailjs.init("06hEvHS1V_7z-LNuo"); 
 
   contactForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     formStatus.textContent = 'Sending message...';
     formStatus.style.color = '#FFDD00'; // Yellow while sending
 
-    const serviceID = 'service_htew2hi'; // ✅ Your EmailJS Service ID
-    const templateID = 'template_j8vczf3'; // ✅ Your EmailJS Template ID
+    const serviceID = 'service_htew2hi'; 
+    const templateID = 'template_j8vczf3'; 
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {

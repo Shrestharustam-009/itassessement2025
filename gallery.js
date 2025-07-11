@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to open the lightbox
     function openLightbox(fullSrc, captionText) {
-        lightboxModal.style.display = 'flex'; // Use flex to center content
+        lightboxModal.style.display = 'flex'; 
         lightboxImg.src = fullSrc;
-        lightboxImg.alt = captionText; // Set alt for accessibility
+        lightboxImg.alt = captionText; 
         lightboxCaption.textContent = captionText;
-        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        document.body.style.overflow = 'hidden'; 
     }
 
     // Function to close the lightbox
@@ -31,27 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Event listener for the close button
+
     closeButton.addEventListener('click', closeLightbox);
 
-    // Event listener to close modal when clicking outside the image
+
     lightboxModal.addEventListener('click', function(event) {
         if (event.target === lightboxModal) { // Only close if clicking the background, not the image itself
             closeLightbox();
         }
     });
 
-    // Event listener for Escape key to close modal
+
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && lightboxModal.style.display === 'flex') {
             closeLightbox();
         }
     });
 
-    // --- Mobile Menu Toggle (if you integrate the header with JS) ---
-    // You would typically have a menu icon in your header HTML:
-    // <div id="menu-icon" class="fas fa-bars"></div> (requires Font Awesome or similar)
-    // And a JS snippet like this:
+
     
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');

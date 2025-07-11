@@ -1,19 +1,17 @@
-/* style.css */
 
-/* Define CSS Variables for consistent theming */
 :root {
-    --primary-red: #FF3333; /* Strong, vibrant red for accents */
-    --secondary-red: #CC0000; /* Darker red for buttons/backgrounds */
-    --light-red: #FF9999; /* Lighter red for labels/subtle highlights */
-    --dark-grey: #0a0a0a; /* Very dark background */
-    --medium-grey: #1a1a1a; /* Slightly lighter dark for elements */
-    --light-grey: #e0e0e0; /* Main text color */
-    --white: #FFFFFF; /* Pure white for contrast */
+    --primary-red: #FF3333; 
+    --secondary-red: #CC0000; 
+    --light-red: #FF9999; 
+    --dark-grey: #0a0a0a; 
+    --medium-grey: #1a1a1a; 
+    --light-grey: #e0e0e0; 
+    --white: #FFFFFF; 
 
     /* Variables for Header (integrating your new styles) */
-    --header-bg: rgba(0,0,0,0.8); /* Semi-transparent black for header */
-    --header-text: var(--light-grey); /* Text color for header links */
-    --header-primary: var(--primary-red); /* Primary color for logo/hover in header */
+    --header-bg: rgba(0,0,0,0.8); 
+    --header-text: var(--light-grey); 
+    --header-primary: var(--primary-red);
 }
 
 
@@ -34,13 +32,13 @@ body {
     position: relative;
 }
 
-/* Ensure main content is not hidden by fixed header */
+
 main {
-    padding-top: 80px; /* Adjust based on your header's actual height */
+    padding-top: 80px; 
 }
 
 
-/* Overall page glow for "chills" effect */
+
 body::before {
     content: '';
     position: absolute;
@@ -62,16 +60,16 @@ body::before {
 /* Main content wrapper */
 .about-us-section {
     width: 100%;
-    max-width: 1300px; /* Wider content area */
-    margin: 60px auto; /* More vertical margin */
+    max-width: 1300px; 
+    margin: 60px auto; 
     padding: 30px;
     box-sizing: border-box;
-    background-color: rgba(10, 0, 0, 0.98); /* Very dark, almost black-red background for content */
+    background-color: rgba(10, 0, 0, 0.98); 
     border-radius: 12px;
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), 0 0 80px rgba(255, 0, 0, 0.2); /* Stronger red glow */
-    border: 2px solid rgba(255, 0, 0, 0.3); /* More prominent red border */
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), 0 0 80px rgba(255, 0, 0, 0.2); 
+    border: 2px solid rgba(255, 0, 0, 0.3); 
     position: relative;
-    z-index: 1; /* Ensure content is above body glow */
+    z-index: 1; 
 }
 
 .content-wrapper {
@@ -161,11 +159,11 @@ section:last-child {
 
 .hero-image-container, .vision-image-container, .commitment-image-container {
     flex: 1;
-    min-width: 400px; /* Ensure images don't get too small */
+    min-width: 400px; 
     position: relative;
     border-radius: 10px;
-    overflow: hidden; /* Hide overflow for rounded corners */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Image glow */
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
     border: 2px solid rgba(255, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -212,22 +210,22 @@ img {
 }
 
 .philosophy-item:hover {
-    transform: translateY(-8px); /* More pronounced lift effect on hover */
-    box-shadow: 0 0 35px rgba(255, 0, 0, 0.6); /* Stronger glow on hover */
-    background-color: rgba(30, 0, 0, 0.9); /* Slightly brighter red on hover */
+    transform: translateY(-8px); 
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.6); 
+    background-color: rgba(30, 0, 0, 0.9); 
 }
 
 .philosophy-item h4 {
     margin-top: 0;
-    color: var(--light-red); /* Very light red for item headings */
+    color: var(--light-red); 
 }
 
 .philosophy-item .icon {
-    font-size: 3.5em; /* Larger icons */
+    font-size: 3.5em; 
     color: var(--primary-red); /* Red icon color */
     display: block;
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255, 0, 0, 1); /* Intense icon glow */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1); 
 }
 
 .philosophy-item p {
@@ -312,14 +310,14 @@ header {
 /* Cart Icon in Header - Enhanced to show total count and amount */
 .cart-icon-btn {
     position: relative;
-    display: flex; /* Use flex to align icon, count, and amount */
+    display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
-    padding: 5px 12px; /* Adjust padding for the whole button area */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    gap: 8px; 
+    padding: 5px 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05); /* Subtle background */
-    color: var(--text); /* Default text color */
+    background: rgba(255, 255, 255, 0.05); 
+    color: var(--text); 
     text-decoration: none;
     font-size: 1em; /* Base font size */
     transition: all 0.3s ease;
@@ -349,23 +347,23 @@ header {
     color: var(--text);
     border-radius: 50%;
     padding: 2px 6px;
-    font-size: 0.7em; /* Smaller font for count badge */
+    font-size: 0.7em; 
     font-weight: bold;
     line-height: 1;
-    min-width: 18px; /* Ensure it's a circle */
+    min-width: 18px; 
     text-align: center;
-    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); /* Glow matching primary */
-    display: none; /* Hidden by default, shown by JS if items exist */
-    margin-left: -5px; /* Pull count slightly over icon */
-    z-index: 1; /* Ensure count is above icon */
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); 
+    display: none; 
+    margin-left: -5px; 
+    z-index: 1; 
 }
 
 .cart-amount {
-    font-size: 0.9em; /* Smaller font for amount */
-    color: var(--accent); /* Accent color for total amount */
+    font-size: 0.9em; 
+    color: var(--accent); 
     font-weight: bold;
-    margin-left: 5px; /* Space from count */
-    display: none; /* Hidden by default, shown by JS if items exist */
+    margin-left: 5px; 
+    display: none; 
 }
 
 

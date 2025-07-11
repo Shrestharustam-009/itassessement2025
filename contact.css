@@ -1,19 +1,19 @@
-/* style.css */
+
 body {
-    font-family: 'Inter', sans-serif; /* Using Inter font for a modern look */
-    background-color: #000000; /* Deep black background */
-    color: #FF0000; /* Vibrant red text for general elements */
+    font-family: 'Inter', sans-serif; 
+    background-color: #000000; 
+    color: #FF0000; 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     position: relative;
-    /* Adding a subtle background pattern or gradient for depth */
+    
     background-image: radial-gradient(circle at center, rgba(50, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
 }
 
-/* Enhancing the "aura" with a body-wide glow */
+
 body::before {
     content: '';
     position: absolute;
@@ -21,10 +21,10 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0 0 200px 80px rgba(255, 0, 0, 0.4) inset; /* Intense red inner glow */
-    pointer-events: none; /* Allow interaction with elements below */
+    box-shadow: 0 0 200px 80px rgba(255, 0, 0, 0.4) inset; 
+    pointer-events: none; 
     z-index: -1;
-    border-radius: 0; /* No rounded corners for the body glow */
+    border-radius: 0; 
 }
 
 header {
@@ -46,7 +46,7 @@ header {
   gap: 10px;
   font-size: 1.5rem;
   color: var(--primary);
-  font-weight: 700; /* Added font-weight for logo */
+  font-weight: 700; 
 }
 
 .navbar {
@@ -78,25 +78,25 @@ header {
 /* Cart Icon in Header - Enhanced to show total count and amount */
 .cart-icon-btn {
     position: relative;
-    display: flex; /* Use flex to align icon, count, and amount */
+    display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
-    padding: 5px 12px; /* Adjust padding for the whole button area */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    gap: 8px; 
+    padding: 5px 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05); /* Subtle background */
-    color: var(--text); /* Default text color */
+    background: rgba(255, 255, 255, 0.05); 
+    color: var(--text); 
     text-decoration: none;
-    font-size: 1em; /* Base font size */
+    font-size: 1em; 
     transition: all 0.3s ease;
     cursor: pointer;
     margin-right: 200px;
 }
 
 .cart-icon-btn:hover {
-    background: rgba(255, 71, 87, 0.1); /* Light red background on hover */
-    border-color: var(--primary); /* Primary red border on hover */
-    color: var(--primary); /* Primary red text on hover */
+    background: rgba(255, 71, 87, 0.1); 
+    border-color: var(--primary); 
+    color: var(--primary); 
     box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); /* Glow on hover */
 }
 
@@ -120,10 +120,10 @@ header {
     line-height: 1;
     min-width: 18px; /* Ensure it's a circle */
     text-align: center;
-    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); /* Glow matching primary */
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); 
     display: none; /* Hidden by default, shown by JS if items exist */
-    margin-left: -5px; /* Pull count slightly over icon */
-    z-index: 1; /* Ensure count is above icon */
+    margin-left: -5px; 
+    z-index: 1; 
 }
 
 .cart-amount {
@@ -196,24 +196,23 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: calc(100% - 24px); /* Account for padding */
+    width: calc(100% - 24px); 
     padding: 12px;
-    border: 2px solid #FF0000; /* Bold red border */
-    border-radius: 10px; /* More rounded corners for inputs */
-    background-color: rgba(20, 0, 0, 0.9); /* Dark red translucent input background */
-    color: #FFDDDD; /* Light red text in input */
+    border: 2px solid #FF0000; 
+    background-color: rgba(20, 0, 0, 0.9); 
+    color: #FFDDDD; 
     font-size: 1.1em;
     outline: none;
     transition: all 0.4s ease;
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4) inset; /* Inner glow for inputs */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4) inset; 
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #FFFF00; /* Striking yellow border on focus */
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); /* Stronger yellow glow on focus */
-    background-color: rgba(30, 0, 0, 1); /* Slightly darker on focus */
+    border-color: #FFFF00; 
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); 
+    background-color: rgba(30, 0, 0, 1); 
 }
 
 textarea {
@@ -222,11 +221,11 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #CC0000; /* Darker red button */
-    color: #FFFFFF; /* White text on button */
+    background-color: #CC0000; 
+    color: #FFFFFF; 
     padding: 18px 35px;
     border: none;
-    border-radius: 10px; /* Rounded corners for button */
+    border-radius: 10px; 
     font-size: 1.3em;
     font-weight: bold;
     cursor: pointer;
@@ -237,9 +236,9 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #FF0000; /* Brighter red on hover */
-    box-shadow: 0 0 35px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.8); /* More intense glow on hover */
-    transform: translateY(-3px) scale(1.02); /* Slight lift and scale */
+    background-color: #FF0000; 
+    box-shadow: 0 0 35px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.8); 
+    transform: translateY(-3px) scale(1.02);
 }
 
 #form-status {

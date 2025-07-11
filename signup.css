@@ -63,36 +63,35 @@ header {
 /* Cart Icon in Header - Enhanced to show total count and amount */
 .cart-icon-btn {
     position: relative;
-    display: flex; /* Use flex to align icon, count, and amount */
+    display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
-    padding: 5px 12px; /* Adjust padding for the whole button area */
-    border: 1px solid rgb(255, 255, 255); /* Subtle border */
+    padding: 5px 12px; 
+    border: 1px solid rgb(255, 255, 255); 
     border-radius: 5px;
-    background: rgb(255, 255, 255); /* Subtle background */
-    color: var(--text); /* Default text color */
+    background: rgb(255, 255, 255); 
+    color: var(--text); 
     text-decoration: none;
-    font-size: 1em; /* Base font size */
+    font-size: 1em; 
     transition: all 0.3s ease;
     cursor: pointer;
     margin-right: 200px;
 }
 
 .cart-icon-btn:hover {
-    background: rgba(255, 71, 87, 0.1); /* Light red background on hover */
-    border-color: var(--primary); /* Primary red border on hover */
-    color: var(--primary); /* Primary red text on hover */
-    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); /* Glow on hover */
+    background: rgba(255, 71, 87, 0.1); 
+    border-color: var(--primary); 
+    color: var(--primary); 
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); 
 }
 
 .cart-icon-btn i {
-    font-size: 1.2em; /* Size of the cart icon */
-    color: var(--text); /* Icon color */
+    font-size: 1.2em; 
+    color: var(--text); 
     transition: color 0.3s ease;
 }
 
 .cart-icon-btn:hover i {
-    color: var(--primary); /* Icon color on hover */
+    color: var(--primary);
 }
 
 .cart-count {
@@ -132,7 +131,6 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: linear-gradient(90deg, #f7f1e4, #e1d6bd); */
     background-color: black;
 }
 

@@ -10,14 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Shopping Cart Elements ---
     const cartIconBtn = document.getElementById('cart-icon-btn');
-    const headerCartCountSpan = document.getElementById('cart-count'); // For total items in header
-    const headerCartAmountSpan = document.getElementById('cart-amount'); // For total amount in header
+    const headerCartCountSpan = document.getElementById('cart-count'); 
+    const headerCartAmountSpan = document.getElementById('cart-amount'); 
     const cartModal = document.getElementById('cart-modal');
     const closeCartButton = document.querySelector('.close-cart-button');
     const cartItemsContainer = document.getElementById('cart-items-container');
-    const modalCartTotalSpan = document.getElementById('total-price'); // For total amount in modal
-    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn'); // Select all add to cart buttons
-
+    const modalCartTotalSpan = document.getElementById('total-price'); 
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn'); 
     
     let cart = []; 
 
@@ -99,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (cart[itemIndex].quantity > 1) {
                         cart[itemIndex].quantity--;
                     } else {
-                        cart.splice(itemIndex, 1); // Remove if quantity becomes 0
+                        cart.splice(itemIndex, 1); 
                     }
-                    // If using localStorage: localStorage.setItem('fitnessShopCart', JSON.stringify(cart));
-                    renderCartItems(); // Re-render
-                    updateHeaderCartDisplay(); // Update header
+                    
+                    renderCartItems(); 
+                    updateHeaderCartDisplay(); 
                     modalCartTotalSpan.textContent = formatCurrency(cart.reduce((sum, i) => sum + (i.price * i.quantity), 0)); // Update modal total
                 }
             });
@@ -164,9 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener to open cart modal
     if (cartIconBtn) {
         cartIconBtn.addEventListener('click', function() {
-            cartModal.classList.add('active'); // Use class for showing/hiding
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            renderCartItems(); // Render items every time cart is opened
+            cartModal.classList.add('active'); 
+            document.body.style.overflow = 'hidden'; 
+            renderCartItems(); 
             modalCartTotalSpan.textContent = formatCurrency(cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)); // Update modal total
         });
     }
@@ -174,15 +173,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener to close cart modal
     if (closeCartButton) {
         closeCartButton.addEventListener('click', function() {
-            cartModal.classList.remove('active'); // Use class for showing/hiding
-            document.body.style.overflow = ''; // Restore scrolling
+            cartModal.classList.remove('active'); 
+            document.body.style.overflow = ''; 
         });
     }
 
-    // Close cart modal when clicking outside content (on the modal overlay itself)
+
     if (cartModal) {
         cartModal.addEventListener('click', function(event) {
-            // Check if the click target is the modal itself, not its content
+
             if (event.target === cartModal) {
                 cartModal.classList.remove('active');
                 document.body.style.overflow = '';

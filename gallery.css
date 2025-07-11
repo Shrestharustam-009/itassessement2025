@@ -1,29 +1,29 @@
 :root {
-    --primary-red: #E63946; /* A slightly softer, more refined red */
-    --secondary-red: #A8202A; /* Darker red for subtle accents */
-    --light-red: #F1FAEE; /* Very light, almost white for highlights */
-    --dark-bg: #1A1A1A; /* Dark charcoal for backgrounds */
-    --medium-dark-bg: #2A2A2A; /* Slightly lighter dark for elements */
-    --text-color: #E0E0E0; /* Light grey for general text */
-    --white: #FFFFFF; /* Pure white for contrast */
+    --primary-red: #E63946; 
+    --secondary-red: #A8202A; 
+    --light-red: #F1FAEE; 
+    --dark-bg: #1A1A1A; 
+    --medium-dark-bg: #2A2A2A; 
+    --text-color: #E0E0E0;
+    --white: #FFFFFF;
 
-    /* Variables for Header (integrating your new styles) */
-    --header-bg: rgba(26,26,26,0.9); /* Semi-transparent dark charcoal for header */
-    --header-text: var(--text-color); /* Text color for header links */
-    --header-primary: var(--primary-red); /* Primary color for logo/hover in header */
+    
+    --header-bg: rgba(26,26,26,0.9); 
+    --header-text: var(--text-color); 
+    --header-primary: var(--primary-red); 
 }
 
 
 /* General Body Styling */
 body {
-    font-family: 'Open Sans', sans-serif; /* Default body font */
-    background-color: var(--dark-bg); /* Dark charcoal background */
-    color: var(--text-color); /* Light grey for general text for readability */
+    font-family: 'Open Sans', sans-serif; 
+    background-color: var(--dark-bg); 
+    color: var(--text-color); 
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll for the main page */
-    /* Subtle, professional background texture */
+    overflow-x: hidden; 
+   
     background-image: radial-gradient(circle at center, rgba(50, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 70%),
                       url('[https://placehold.co/1920x1080/1a1a1a/2a2a2a?text=Subtle+Dark+Texture](https://placehold.co/1920x1080/1a1a1a/2a2a2a?text=Subtle+Dark+Texture)'); /* Placeholder for a very subtle dark texture */
     background-size: cover;
@@ -31,9 +31,9 @@ body {
     position: relative;
 }
 
-/* Ensure main content is not hidden by fixed header */
+
 main {
-    padding-top: 80px; /* Adjust based on your header's actual height */
+    padding-top: 80px; 
 }
 
 
@@ -45,10 +45,10 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0 0 150px 70px rgba(230, 57, 70, 0.15) inset; /* Softer, diffused inner red glow */
+    box-shadow: 0 0 150px 70px rgba(230, 57, 70, 0.15) inset; 
     pointer-events: none;
     z-index: -1;
-    animation: subtle-glow-pulse 5s infinite alternate ease-in-out; /* Slow, pulsating glow */
+    animation: subtle-glow-pulse 5s infinite alternate ease-in-out; 
 }
 
 @keyframes subtle-glow-pulse {
@@ -59,16 +59,16 @@ body::before {
 /* Main content wrapper for Gallery */
 .gallery-section {
     width: 100%;
-    max-width: 1400px; /* Wider content area for horizontal scroll */
-    margin: 60px auto; /* More vertical margin */
+    max-width: 1400px; 
+    margin: 60px auto; 
     padding: 30px;
     box-sizing: border-box;
-    background-color: rgba(20, 20, 20, 0.95); /* Slightly lighter dark background for content */
+    background-color: rgba(20, 20, 20, 0.95); 
     border-radius: 12px;
-    box-shadow: 0 0 30px rgba(230, 57, 70, 0.2), 0 0 60px rgba(230, 57, 70, 0.1); /* Softer red glow */
-    border: 1px solid rgba(230, 57, 70, 0.2); /* Thinner, softer red border */
+    box-shadow: 0 0 30px rgba(230, 57, 70, 0.2), 0 0 60px rgba(230, 57, 70, 0.1);
+    border: 1px solid rgba(230, 57, 70, 0.2); 
     position: relative;
-    z-index: 1; /* Ensure content is above body glow */
+    z-index: 1; 
 }
 
 .content-wrapper {
@@ -78,15 +78,15 @@ body::before {
 /* Headings - Strong and impactful, but refined */
 h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--primary-red); /* Strong red for main headings */
+    color: var(--primary-red); 
     text-align: center;
     margin-bottom: 25px;
-    text-shadow: 0 0 10px rgba(253, 0, 21, 0.7); /* Softer text glow */
+    text-shadow: 0 0 10px rgba(253, 0, 21, 0.7); 
 }
 
 h2 {
-    font-size: 4em; /* Slightly smaller hero heading */
-    font-weight: 800; /* Bold, but not extra bold */
+    font-size: 4em;
+    font-weight: 800; 
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 35px;
@@ -95,38 +95,38 @@ h2 {
 
 /* Paragraphs */
 p {
-    font-size: 1.1em; /* Slightly smaller for professionalism */
-    color: var(--text-color); /* Light grey for body text */
+    font-size: 1.1em; 
+    color: var(--text-color); 
     margin-bottom: 25px;
-    text-align: center; /* Center align for taglines, justify for longer blocks */
+    text-align: center; 
     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .tagline {
-    font-size: 1.6em; /* Slightly smaller tagline */
+    font-size: 1.6em;
     font-weight: 600;
-    color: var(--light-red); /* Lightest red for tagline */
+    color: var(--light-red); 
     text-align: center;
     margin-bottom: 50px;
     font-style: italic;
-    text-shadow: red; /* Softer text shadow */
+    text-shadow: red; 
 }
 
 /* Gallery Horizontal Scroll Container */
 .gallery-horizontal-scroll {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-direction: row; /* Ensure items are in a row */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scroll-snap-type: x mandatory; /* Snap to items */
-    padding: 20px 0; /* Vertical padding */
-    gap: 30px; /* Space between items */
-    justify-content: flex-start; /* Align items to the start */
-    align-items: flex-start; /* Align items to the top */
-    /* Custom scrollbar for a professional look */
-    scrollbar-width: thin; /* Firefox */
+    display: flex; 
+    flex-direction: row; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scroll-snap-type: x mandatory; 
+    padding: 20px 0; 
+    gap: 30px; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+
+    scrollbar-width: thin; 
     scrollbar-color: var(--primary-red) var(--medium-dark-bg); /* Firefox */
 }
 
@@ -147,22 +147,22 @@ p {
 
 
 .gallery-item {
-    flex: 0 0 auto; /* Prevent items from shrinking or growing */
-    width: 350px; /* Fixed width for each gallery item */
-    height: 300px; /* Fixed height for each gallery item */
+    flex: 0 0 auto; 
+    width: 350px; 
+    height: 300px; 
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(230, 57, 70, 0.2); /* Subtle glow for items */
-    border: 1px solid rgba(230, 57, 70, 0.2); /* Thinner, softer border */
+    box-shadow: 0 0 10px rgba(230, 57, 70, 0.2); 
+    border: 1px solid rgba(230, 57, 70, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-snap-align: start; /* Snap alignment for scrolling */
+    scroll-snap-align: start; 
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    box-shadow: 0 0 20px rgba(230, 57, 70, 0.4); /* Slightly stronger glow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.4); 
 }
 
 .gallery-item img.thumbnail {
@@ -175,7 +175,7 @@ p {
 }
 
 .gallery-item:hover img.thumbnail {
-    filter: brightness(0.8) saturate(1.1); /* Subtle darken and intensify on hover */
+    filter: brightness(0.8) saturate(1.1); 
 }
 
 .item-overlay {
@@ -244,12 +244,7 @@ p {
 .lightbox-content {
     margin: auto;
     display: block;
-    /* REMOVE OR COMMENT OUT THESE TWO LINES: */
-    /* max-width: 90%; */
-    /* max-height: 90vh; */
-
-    /* The image will now try to display at its full intrinsic size. */
-    /* If the image is larger than the screen, the lightbox modal will get scrollbars. */
+    
 
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(230, 57, 70, 0.6);
@@ -352,10 +347,10 @@ p {
         display: block;
     }
     .gallery-horizontal-scroll {
-        padding: 15px 0; /* Reduce padding for scrollable area */
+        padding: 15px 0; 
     }
     .gallery-item {
-        width: 300px; /* Further adjust item width */
+        width: 300px; 
         height: 250px;
     }
 }
@@ -794,31 +789,31 @@ header {
 /* Cart Icon in Header - Enhanced to show total count and amount */
 .cart-icon-btn {
     position: relative;
-    display: flex; /* Use flex to align icon, count, and amount */
+    display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
-    padding: 5px 12px; /* Adjust padding for the whole button area */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    gap: 8px; 
+    padding: 5px 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05); /* Subtle background */
-    color: var(--text); /* Default text color */
+    background: rgba(255, 255, 255, 0.05); 
+    color: var(--text); 
     text-decoration: none;
-    font-size: 1em; /* Base font size */
+    font-size: 1em; 
     transition: all 0.3s ease;
     cursor: pointer;
     margin-right: 200px;
 }
 
 .cart-icon-btn:hover {
-    background: rgba(255, 71, 87, 0.1); /* Light red background on hover */
-    border-color: var(--primary); /* Primary red border on hover */
-    color: var(--primary); /* Primary red text on hover */
-    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); /* Glow on hover */
+    background: rgba(255, 71, 87, 0.1); 
+    border-color: var(--primary); 
+    color: var(--primary); 
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); 
 }
 
 .cart-icon-btn i {
-    font-size: 1.2em; /* Size of the cart icon */
-    color: var(--text); /* Icon color */
+    font-size: 1.2em; 
+    color: var(--text); 
     transition: color 0.3s ease;
 }
 
@@ -831,23 +826,23 @@ header {
     color: var(--text);
     border-radius: 50%;
     padding: 2px 6px;
-    font-size: 0.7em; /* Smaller font for count badge */
+    font-size: 0.7em; 
     font-weight: bold;
     line-height: 1;
-    min-width: 18px; /* Ensure it's a circle */
+    min-width: 18px; 
     text-align: center;
-    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); /* Glow matching primary */
-    display: none; /* Hidden by default, shown by JS if items exist */
-    margin-left: -5px; /* Pull count slightly over icon */
-    z-index: 1; /* Ensure count is above icon */
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); 
+    display: none; 
+    margin-left: -5px; 
+    z-index: 1; 
 }
 
 .cart-amount {
-    font-size: 0.9em; /* Smaller font for amount */
-    color: var(--accent); /* Accent color for total amount */
+    font-size: 0.9em; 
+    color: var(--accent); 
     font-weight: bold;
-    margin-left: 5px; /* Space from count */
-    display: none; /* Hidden by default, shown by JS if items exist */
+    margin-left: 5px; 
+    display: none; 
 }
 
 

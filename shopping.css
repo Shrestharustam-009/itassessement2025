@@ -1,19 +1,19 @@
 :root {
-  --primary: #ff4757; /* Your primary red */
-  --accent: #2ed573; /* Your accent green */
-  --text: #fff; /* Your text white */
-  --bg-dark: #111; /* Your dark background */
-  --bg-light: #222; /* Your light background */
+  --primary: #ff4757; 
+  --accent: #2ed573; 
+  --text: #fff; 
+  --bg-dark: #111; 
+  --bg-light: #222; 
 
-  /* New variables for consistent styling, using your palette */
-  --card-bg: var(--bg-light); /* Background for food cards */
-  --hover-overlay-bg: rgba(0, 0, 0, 0.7); /* Dark overlay for hover */
-  --button-bg: var(--primary); /* Button background */
-  --button-hover-bg: #e03f4c; /* Slightly darker primary for hover */
-  --button-text: var(--text); /* Button text color */
-  --cart-modal-bg: var(--bg-light); /* Cart modal background */
-  --cart-total-color: var(--primary); /* Cart total color */
-  --cart-item-border: rgba(255, 255, 255, 0.1); /* Subtle border for cart items */
+
+  --card-bg: var(--bg-light); 
+  --hover-overlay-bg: rgba(0, 0, 0, 0.7); 
+  --button-bg: var(--primary); 
+  --button-hover-bg: #e03f4c; 
+  --button-text: var(--text); 
+  --cart-modal-bg: var(--bg-light); 
+  --cart-total-color: var(--primary); 
+  --cart-item-border: rgba(255, 255, 255, 0.1); 
 }
 
 body {
@@ -75,16 +75,16 @@ header {
 /* Cart Icon in Header - Enhanced to show total count and amount */
 .cart-icon-btn {
     position: relative;
-    display: flex; /* Use flex to align icon, count, and amount */
+    display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
+    gap: 8px; 
     padding: 5px 12px; /* Adjust padding for the whole button area */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05); /* Subtle background */
+    background: rgba(255, 255, 255, 0.05); 
     color: var(--text); /* Default text color */
     text-decoration: none;
-    font-size: 1em; /* Base font size */
+    font-size: 1em; 
     transition: all 0.3s ease;
     cursor: pointer;
     margin-right: 200px;
@@ -112,23 +112,23 @@ header {
     color: var(--text);
     border-radius: 50%;
     padding: 2px 6px;
-    font-size: 0.7em; /* Smaller font for count badge */
+    font-size: 0.7em; 
     font-weight: bold;
     line-height: 1;
-    min-width: 18px; /* Ensure it's a circle */
+    min-width: 18px; 
     text-align: center;
-    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); /* Glow matching primary */
-    display: none; /* Hidden by default, shown by JS if items exist */
-    margin-left: -5px; /* Pull count slightly over icon */
-    z-index: 1; /* Ensure count is above icon */
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); 
+    display: none; 
+    margin-left: -5px; 
+    z-index: 1; 
 }
 
 .cart-amount {
-    font-size: 0.9em; /* Smaller font for amount */
-    color: var(--accent); /* Accent color for total amount */
+    font-size: 0.9em;
+    color: var(--accent);
     font-weight: bold;
-    margin-left: 5px; /* Space from count */
-    display: none; /* Hidden by default, shown by JS if items exist */
+    margin-left: 5px; 
+    display: none; 
 }
 
 

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Fitness Shop</title>
+  <link rel="stylesheet" href="shop.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="ri-home-3-line"></i> <span class="log">FitLogo</span>
+    </div>
+
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Classes</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="main">
+      <a href="#">Sign In</a>
+      <a href="#">Register</a>
+      <i class="ri-menu-line" id="menu-icon"></i>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video autoplay loop muted playsinline>
+      <source src="pic/Make Your Workout Worth the Effort with Optimum Nutrition.mp4" type="video/mp4">
+    </video>
+    <div class="information">
+      <h1>ORDER ONLINE</h1>
+      <p class="order_description">You can order online! Browse our menu items and choose what you'd like to order.</p>
+      <span class="online-sign">
+        <p class="sign"></p>Accepting Orders
+      </span>
+      <button class="order-btn">Order Now</button>
+    </div>
+  </section>
+
+  <div class="nav-tab">
+    <div class="tab-container">
+      <a href="#supplements" class="tab">Supplements</a>
+      <a href="#accessories" class="tab">Accessories</a>
+      <a href="#shoes" class="tab">Shoes</a>
+      <a href="#fits" class="tab">Fits</a>
+    </div>
+  </div>
+
+  <div class="food container" id="supplements">
+  <div class="food-card">
+    <img src="pic/71VGKI4TWoL-Photoroom (1).jpg" alt="Whey" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Whey Protein</div>
+      <div class="price-data">
+        <div class="food-price">Rs3000</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="pic/100-creatine-unflavored.webp" alt="Creatine" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Creatine</div>
+      <div class="price-data">
+        <div class="food-price">Rs2500</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="pic/Cookies_black_background-Photoroom-Photoroom.jpg" alt="Old Monk Protein" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Old Monk Protein</div>
+      <div class="price-data">
+        <div class="food-price">Rs4000</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="pic/mass-gainer-001-250x250.webp" alt="Mass Gainer" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Mass Gainer</div>
+      <div class="price-data">
+        <div class="food-price">Rs5000</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="pic/MuscleTech-NitroTech-Whey-Protein-4lb-Milk-Chocolate.webp" alt="Nitro Tech" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Nitro Tech</div>
+      <div class="price-data">
+        <div class="food-price">Rs2500</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="pic/gym-supplement.png" alt="Your Brand" class="food-image">
+    <div class="food-info">
+      <div class="food-name">Your Brand</div>
+      <div class="price-data">
+        <div class="food-price">Rs1000</div>
+      </div>
+      <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+            
+            <div class="section-content">
+            <div class="food container" id="Snacks">
+                
+                <div class="food-card">
+                    <img src="pic/Classic-Heavy-Bag-IRL-V1_800x.webp" alt="Boxing Bag" class="food-image" height="90px">
+                    <div class="food-info">
+                        <div class="food-name">Boxing Bag</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs7000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/71j7pmaU_IL._SL1500.webp" alt="samosa" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Belt (2 pcs)</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs1000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/WRAPLIFTINGGLOVESGAGV4216.A-Edit_ZH_ZH.webp" alt="Aloo Paratha" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Gloves</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs300</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/instalite-water-bottle-01-02-2022-9-270816252-d8sf0j1d.avif" alt="Chops" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Water Bottle</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs1000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+        
+        </video>
+            </div>
+
+
+
+            <div class="section-content">
+
+        </div>
+            <div class="food container" id="Desserts">
+                
+                <div class="food-card">
+                    <img src="pic/s5.jpg" alt="Kheer" class="food-image" >
+                    <div class="food-info">
+                        <div class="food-name">Nike Sport</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs3000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/s2.jpg" alt="gulab" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Air Tech</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs5000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/s3.jpeg" alt="carrot" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Adidas High</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs7000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="pic/s4.avif" alt="Choclate cake" class="food-image">
+                    <div class="food-info">
+                        <div class="food-name">Fila</div>
+                        <div class="price-data">
+                            <div class="food-price">Rs2000</div>
+                        </div>
+                        <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+                
+
+
+            <div class="section-content">
+                <div class="food container" id="Cakes">
+                    
+                    <div class="food-card">
+                        <img src="pic/t2.avif" alt="cake" class="food-image" >
+                        <div class="food-info">
+                            <div class="food-name">Choclate cake</div>
+                            <div class="price-data">
+                                <div class="food-price">Rs300</div>
+                            </div>
+                            <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <img src="pic/t3.avif" alt="cake" class="food-image">
+                        <div class="food-info">
+                            <div class="food-name">Pound Cake</div>
+                            <div class="price-data">
+                                <div class="food-price">Rs300</div>
+                            </div>
+                            <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <img src="pic/t4.jpg" alt="cake" class="food-image">
+                        <div class="food-info">
+                            <div class="food-name">Rainbow Cake</div>
+                            <div class="price-data">
+                                <div class="food-price">Rs300</div>
+                            </div>
+                            <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <img src="pic/t5.webp" alt="Black forest" class="food-image">
+                        <div class="food-info">
+                            <div class="food-name">Black Forest Cake</div>
+                            <div class="price-data">
+                                <div class="food-price">Rs300</div>
+                            </div>
+                            <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <img src="pic/t1.jpeg" alt="vanilla" class="food-image">
+                        <div class="food-info">
+                            <div class="food-name">Vanilla Cake</div>
+                            <div class="price-data">
+                                <div class="food-price">Rs300</div>
+                            </div>
+                            <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+  </section>
+
+  <section class="download-section">
+  <div class="download-container">
+    <div class="download-text">
+      <h2>Download the App to Get More Benefits</h2>
+      <p>
+        Join our fitness family today and start your transformative fitness journey,
+        empowering yourself to feel stronger, healthier, and more confident than ever before.
+      </p>
+      <a href="#" class="download-btn">Get the app</a>
+    </div>
+    <div class="download-image">
+      <img src="pic/download__5_-removebg-preview.png" alt="Fitness App Promo">
+    </div>
+  </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p>Your fitness journey begins here. Join us and transform your body and mind.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#supplements">Supplements</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact</h2>
+      <p>Email: info@fitzone.com</p>
+      <p>Phone: +977-123456789</p>
+      <p>Address: Fitness Street, Kathmandu, Nepal</p>
+    </div>
+
+    <div class="footer-section social">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-line"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 FitZone. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-model">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button class="close-button">X</button>
+    </div>
+    <ul class="cart-items"></ul>
+    <div class="cart-total">Total: Rs <span id="total-price">0</span></div>
+    <div class="checkout-button">Checkout</div>
+  </div>
+
+  <script>
+    // Basic mobile menu toggle
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    menuIcon.onclick = () => {
+      navbar.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

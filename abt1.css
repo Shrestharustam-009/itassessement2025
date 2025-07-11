@@ -1,0 +1,664 @@
+/* style.css */
+
+/* Define CSS Variables for consistent theming */
+:root {
+    --primary-red: #FF3333; /* Strong, vibrant red for accents */
+    --secondary-red: #CC0000; /* Darker red for buttons/backgrounds */
+    --light-red: #FF9999; /* Lighter red for labels/subtle highlights */
+    --dark-grey: #0a0a0a; /* Very dark background */
+    --medium-grey: #1a1a1a; /* Slightly lighter dark for elements */
+    --light-grey: #e0e0e0; /* Main text color */
+    --white: #FFFFFF; /* Pure white for contrast */
+
+    /* Variables for Header (integrating your new styles) */
+    --header-bg: rgba(0,0,0,0.8); /* Semi-transparent black for header */
+    --header-text: var(--light-grey); /* Text color for header links */
+    --header-primary: var(--primary-red); /* Primary color for logo/hover in header */
+}
+
+
+/* General Body Styling */
+body {
+    font-family: 'Open Sans', sans-serif; /* Default body font */
+    background-color: var(--dark-grey); /* Absolute black background */
+    color: var(--light-grey); /* Light grey for general text for readability */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    /* Deeper, more atmospheric background */
+    background-image: radial-gradient(circle at center, rgba(30, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 70%),
+                      url('https://placehold.co/1920x1080/050505/101010?text=Subtle+Dark+Texture'); /* Corrected URL syntax */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Ensure main content is not hidden by fixed header */
+main {
+    padding-top: 80px; /* Adjust based on your header's actual height */
+}
+
+
+/* Overall page glow for "chills" effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 250px 100px rgba(255, 0, 0, 0.25) inset; /* Intense, diffused inner red glow */
+    pointer-events: none;
+    z-index: -1;
+    animation: subtle-glow-pulse 5s infinite alternate ease-in-out; /* Slow, pulsating glow */
+}
+
+@keyframes subtle-glow-pulse {
+    from { box-shadow: 0 0 250px 100px rgba(255, 0, 0, 0.25) inset; }
+    to { box-shadow: 0 0 280px 110px rgba(255, 50, 50, 0.35) inset; }
+}
+
+/* Main content wrapper */
+.about-us-section {
+    width: 100%;
+    max-width: 1300px; /* Wider content area */
+    margin: 60px auto; /* More vertical margin */
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgba(10, 0, 0, 0.98); /* Very dark, almost black-red background for content */
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), 0 0 80px rgba(255, 0, 0, 0.2); /* Stronger red glow */
+    border: 2px solid rgba(255, 0, 0, 0.3); /* More prominent red border */
+    position: relative;
+    z-index: 1; /* Ensure content is above body glow */
+}
+
+.content-wrapper {
+    padding: 50px;
+}
+
+/* Headings - Strong and impactful */
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-red); /* Strong red for main headings */
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.9); /* Intense text glow */
+}
+
+h2 {
+    font-size: 4.5em; /* Larger hero heading */
+    font-weight: 900; /* Extra bold */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid rgba(255, 0, 0, 0.5); /* Thicker underline effect */
+    display: inline-block;
+    padding-bottom: 8px;
+    color: var(--primary-red); /* Consistent primary red for section headings */
+}
+
+h4 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--light-red); /* Even lighter red for sub-headings */
+    margin-bottom: 18px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.15em;
+    color: var(--light-grey); /* Lighter grey for body text for contrast */
+    margin-bottom: 25px;
+    text-align: justify;
+    max-width: 950px; /* Wider paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tagline {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--light-red); /* Lightest red for tagline */
+    text-align: center;
+    margin-bottom: 50px;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(255, 170, 170, 0.7);
+}
+
+/* Section specific styling */
+section {
+    padding: 60px 0;
+    border-bottom: 1px dashed rgba(255, 0, 0, 0.2); /* More visible separator */
+    margin-bottom: 40px;
+    display: flex; /* Use flexbox for layout with images */
+    align-items: center;
+    gap: 50px; /* Space between text and image */
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Image Containers */
+.hero-section, .vision-block, .commitment-block {
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.hero-content, .vision-content, .commitment-content {
+    flex: 1;
+    min-width: 300px; /* Ensure content doesn't get too narrow */
+}
+
+.hero-image-container, .vision-image-container, .commitment-image-container {
+    flex: 1;
+    min-width: 400px; /* Ensure images don't get too small */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Image glow */
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image-container:hover, .vision-image-container:hover, .commitment-image-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.7); /* Stronger glow on hover */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Slightly smaller border-radius for image itself */
+    object-fit: cover; /* Ensure image covers container */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%); /* Dark gradient overlay */
+    border-radius: 8px;
+}
+
+/* Philosophy Grid */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min-width for more columns */
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.philosophy-item {
+    background-color: rgba(20, 0, 0, 0.8); /* Darker red translucent background for items */
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-8px); /* More pronounced lift effect on hover */
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.6); /* Stronger glow on hover */
+    background-color: rgba(30, 0, 0, 0.9); /* Slightly brighter red on hover */
+}
+
+.philosophy-item h4 {
+    margin-top: 0;
+    color: var(--light-red); /* Very light red for item headings */
+}
+
+.philosophy-item .icon {
+    font-size: 3.5em; /* Larger icons */
+    color: var(--primary-red); /* Red icon color */
+    display: block;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1); /* Intense icon glow */
+}
+
+.philosophy-item p {
+    font-size: 1em;
+    color: #b0b0b0;
+    text-align: center;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-red); /* Dark red button */
+    color: var(--white); /* White text */
+    padding: 18px 40px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6); /* Button glow */
+}
+
+.cta-button:hover {
+    background-color: var(--primary-red); /* Brighter red on hover */
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9), 0 0 60px rgba(255, 0, 0, 0.7); /* More intense glow */
+    transform: translateY(-5px) scale(1.03); /* Lift and slight scale */
+}
+
+/* Header Styling (from your input, integrated with variables) */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Added subtle shadow */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 700; /* Added font-weight for logo */
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: red;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjusted gap for new cart display */
+}
+
+.main a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Cart Icon in Header - Enhanced to show total count and amount */
+.cart-icon-btn {
+    position: relative;
+    display: flex; /* Use flex to align icon, count, and amount */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    padding: 5px 12px; /* Adjust padding for the whole button area */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05); /* Subtle background */
+    color: var(--text); /* Default text color */
+    text-decoration: none;
+    font-size: 1em; /* Base font size */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-right: 200px;
+}
+
+.cart-icon-btn:hover {
+    background: rgba(255, 71, 87, 0.1); /* Light red background on hover */
+    border-color: var(--primary); /* Primary red border on hover */
+    color: var(--primary); /* Primary red text on hover */
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5); /* Glow on hover */
+}
+
+.cart-icon-btn i {
+    font-size: 1.2em; /* Size of the cart icon */
+    color: var(--text); /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.cart-icon-btn:hover i {
+    color: var(--primary); /* Icon color on hover */
+}
+
+.cart-count {
+    background-color: var(--primary);
+    color: var(--text);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em; /* Smaller font for count badge */
+    font-weight: bold;
+    line-height: 1;
+    min-width: 18px; /* Ensure it's a circle */
+    text-align: center;
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.8); /* Glow matching primary */
+    display: none; /* Hidden by default, shown by JS if items exist */
+    margin-left: -5px; /* Pull count slightly over icon */
+    z-index: 1; /* Ensure count is above icon */
+}
+
+.cart-amount {
+    font-size: 0.9em; /* Smaller font for amount */
+    color: var(--accent); /* Accent color for total amount */
+    font-weight: bold;
+    margin-left: 5px; /* Space from count */
+    display: none; /* Hidden by default, shown by JS if items exist */
+}
+
+
+#menu-icon {
+  font-size: 1.8rem;
+  color: var(--text);
+  cursor: pointer;
+  display: none;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .about-us-section {
+        max-width: 95%;
+    }
+    .content-wrapper {
+        padding: 40px;
+    }
+    h2 {
+        font-size: 3.8em;
+    }
+    h3 {
+        font-size: 2.5em;
+    }
+    section {
+        flex-direction: column; /* Stack image and text on medium screens */
+        text-align: center;
+    }
+    .hero-content, .vision-content, .commitment-content {
+        order: 2; /* Text below image on stack */
+        margin-top: 30px;
+    }
+    .hero-image-container, .vision-image-container, .commitment-image-container {
+        order: 1; /* Image above text on stack */
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 1rem 2rem; /* Reduce header padding */
+    }
+    .navbar {
+        display: none; /* Hide navbar on smaller screens, will be toggled by JS */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--header-bg);
+        padding: 1rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .navbar.active { /* Class to be added by JS for mobile menu */
+        display: flex;
+    }
+    .navbar a {
+        padding: 0.8rem 2rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+    }
+    .main-nav-buttons {
+        display: none; /* Hide main nav buttons on smaller screens */
+    }
+    #menu-icon {
+        display: block; /* Show menu icon for mobile toggle */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 25px;
+    }
+    h2 {
+        font-size: 2.8em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    .tagline {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 1em;
+        text-align: left; /* Switch to left align for better readability on small screens */
+    }
+    .philosophy-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+    .philosophy-item {
+        padding: 25px;
+    }
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 2.2em;
+        letter-spacing: 1px;
+    }
+    h3 {
+        font-size: 1.7em;
+        letter-spacing: 1px;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .philosophy-item .icon {
+        font-size: 3em;
+    }
+    header {
+        padding: 1rem 1.5rem; /* Further reduce header padding */
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+.footer {
+
+  background-color: #161616;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  height: 40vh;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+.footer-section p, .footer-section a {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  margin-left: 100px;
+}
+
+.social-icons a {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: crimson;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-left: 700px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+.download-section {
+  margin-top: 40px;
+  background-color: #3b82f6; /* blue-500 */
+  padding: 60px 20px;
+  color: white;
+}
+
+.download-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  height: 60vh;
+}
+
+.download-text {
+  flex: 1 1 500px;
+}
+
+.download-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.download-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.download-btn {
+  background-color: white;
+  color: black;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 200px;
+}
+
+.download-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.download-image {
+  
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.download-image img {
+  max-width: 100%;
+  height: auto;
+  margin-top: -150px;
+  margin-left: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-text h2 {
+    font-size: 28px;
+  }
+
+  .download-text p {
+    font-size: 16px;
+  }
+}

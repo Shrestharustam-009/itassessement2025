@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Fitness Shop</title>
+  <link rel="stylesheet" href="shopping.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="ri-home-3-line"></i> <span class="log">FitLogo</span>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="shopping.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="abt1.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="main">
+      <a href="signup.html">Sign In</a>
+      <a href="#">Register</a>
+      <!-- Cart Icon with Total Items and Total Amount -->
+      <a href="#" class="cart-icon-btn" id="cart-icon-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cart-count">0</span>
+          <span class="cart-amount" id="cart-amount">Rs 0</span>
+      </a>
+      <i class="ri-menu-line" id="menu-icon"></i>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video autoplay loop muted playsinline>
+      <source src="pic/Make Your Workout Worth the Effort with Optimum Nutrition.mp4" type="video/mp4">
+    </video>
+    <div class="information">
+      <h1>ORDER ONLINE</h1>
+      <p class="order_description">You can order online! Browse our menu items and choose what you'd like to order.</p>
+      <span class="online-sign">
+        <p class="sign"></p>Accepting Orders
+      </span>
+      <button class="order-btn">Order Now</button>
+    </div>
+  </section>
+
+  <div class="nav-tab">
+    <div class="tab-container">
+      <a href="#supplements" class="tab">Supplements</a>
+      <a href="#accessories" class="tab">Accessories</a>
+      <a href="#shoes" class="tab">Shoes</a>
+      <a href="#fits" class="tab">Fits</a>
+    </div>
+  </div>
+
+  <div class="food container" id="supplements">
+    <div class="food-card" data-id="whey-protein" data-price="3000" data-thumbnail="pic/71VGKI4TWoL-Photoroom (1).jpg">
+      <img src="pic/71VGKI4TWoL-Photoroom (1).jpg" alt="Whey" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Whey Protein</div>
+          <div class="food-price">Rs3000</div>
+          <button class="add-to-cart-btn" data-id="whey-protein">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-id="creatine" data-price="2500" data-thumbnail="pic/100-creatine-unflavored.webp">
+      <img src="pic/100-creatine-unflavored.webp" alt="Creatine" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Creatine</div>
+          <div class="food-price">Rs2500</div>
+          <button class="add-to-cart-btn" data-id="creatine">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-id="old-monk-protein" data-price="4000" data-thumbnail="pic/Cookies_black_background-Photoroom-Photoroom.jpg">
+      <img src="pic/Cookies_black_background-Photoroom-Photoroom.jpg" alt="Old Monk Protein" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Old Monk Protein</div>
+          <div class="food-price">Rs4000</div>
+          <button class="add-to-cart-btn" data-id="old-monk-protein">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-id="mass-gainer" data-price="5000" data-thumbnail="pic/mass-gainer-001-250x250.webp">
+      <img src="pic/mass-gainer-001-250x250.webp" alt="Mass Gainer" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Mass Gainer</div>
+          <div class="food-price">Rs5000</div>
+          <button class="add-to-cart-btn" data-id="mass-gainer">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-id="nitro-tech" data-price="2500" data-thumbnail="pic/MuscleTech-NitroTech-Whey-Protein-4lb-Milk-Chocolate.webp">
+      <img src="pic/MuscleTech-NitroTech-Whey-Protein-4lb-Milk-Chocolate.webp" alt="Nitro Tech" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Nitro Tech</div>
+          <div class="food-price">Rs2500</div>
+          <button class="add-to-cart-btn" data-id="nitro-tech">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-id="your-brand" data-price="1000" data-thumbnail="pic/gym-supplement.png">
+      <img src="pic/gym-supplement.png" alt="Your Brand" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Your Brand</div>
+          <div class="food-price">Rs1000</div>
+          <button class="add-to-cart-btn" data-id="your-brand">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessories Section -->
+  <div class="food container" id="accessories">
+    <div class="food-card" data-id="boxing-bag" data-price="7000" data-thumbnail="pic/Classic-Heavy-Bag-IRL-V1_800x.webp">
+      <img src="pic/Classic-Heavy-Bag-IRL-V1_800x.webp" alt="Boxing Bag" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Boxing Bag</div>
+          <div class="food-price">Rs7000</div>
+          <button class="add-to-cart-btn" data-id="boxing-bag">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="belt-2pcs" data-price="1000" data-thumbnail="pic/71j7pmaU_IL._SL1500.webp">
+      <img src="pic/71j7pmaU_IL._SL1500.webp" alt="Belt" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Belt (2 pcs)</div>
+          <div class="food-price">Rs1000</div>
+          <button class="add-to-cart-btn" data-id="belt-2pcs">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="gloves" data-price="300" data-thumbnail="pic/WRAPLIFTINGGLOVESGAGV4216.A-Edit_ZH_ZH.webp">
+      <img src="pic/WRAPLIFTINGGLOVESGAGV4216.A-Edit_ZH_ZH.webp" alt="Gloves" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Gloves</div>
+          <div class="food-price">Rs300</div>
+          <button class="add-to-cart-btn" data-id="gloves">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="water-bottle" data-price="1000" data-thumbnail="pic/instalite-water-bottle-01-02-2022-9-270816252-d8sf0j1d.avif">
+      <img src="pic/instalite-water-bottle-01-02-2022-9-270816252-d8sf0j1d.avif" alt="Water Bottle" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Water Bottle</div>
+          <div class="food-price">Rs1000</div>
+          <button class="add-to-cart-btn" data-id="water-bottle">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shoes Section -->
+  <div class="food container" id="shoes">
+    <div class="food-card" data-id="nike-sport" data-price="3000" data-thumbnail="pic/s5.jpg">
+      <img src="pic/s5.jpg" alt="Nike Sport" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Nike Sport</div>
+          <div class="food-price">Rs3000</div>
+          <button class="add-to-cart-btn" data-id="nike-sport">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="air-tech" data-price="5000" data-thumbnail="pic/s2.jpg">
+      <img src="pic/s2.jpg" alt="Air Tech" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Air Tech</div>
+          <div class="food-price">Rs5000</div>
+          <button class="add-to-cart-btn" data-id="air-tech">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="adidas-high" data-price="7000" data-thumbnail="pic/s3.jpeg">
+      <img src="pic/s3.jpeg" alt="Adidas High" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Adidas High</div>
+          <div class="food-price">Rs7000</div>
+          <button class="add-to-cart-btn" data-id="adidas-high">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="fila" data-price="2000" data-thumbnail="pic/s4.avif">
+      <img src="pic/s4.avif" alt="Fila" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Fila</div>
+          <div class="food-price">Rs2000</div>
+          <button class="add-to-cart-btn" data-id="fila">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fits Section (assuming these are clothing/fits) -->
+  <div class="food container" id="fits">
+    <div class="food-card" data-id="choclate-cake-fit" data-price="300" data-thumbnail="pic/t2.avif">
+      <img src="pic/t2.avif" alt="Choclate cake" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">White Top</div>
+          <div class="food-price">Rs3000</div>
+          <button class="add-to-cart-btn" data-id="choclate-cake-fit">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="pound-cake-fit" data-price="300" data-thumbnail="pic/t3.avif">
+      <img src="pic/t3.avif" alt="Pound Cake" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Tank Top</div>
+          <div class="food-price">Rs2000</div>
+          <button class="add-to-cart-btn" data-id="pound-cake-fit">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="rainbow-cake-fit" data-price="300" data-thumbnail="pic/t4.jpg">
+      <img src="pic/t4.jpg" alt="Rainbow Cake" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Shorts</div>
+          <div class="food-price">Rs500</div>
+          <button class="add-to-cart-btn" data-id="rainbow-cake-fit">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="black-forest-fit" data-price="300" data-thumbnail="pic/t5.webp">
+      <img src="pic/t5.webp" alt="Black forest" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Leggings</div>
+          <div class="food-price">Rs2000</div>
+          <button class="add-to-cart-btn" data-id="black-forest-fit">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="food-card" data-id="vanilla-cake-fit" data-price="300" data-thumbnail="pic/t1.jpeg">
+      <img src="pic/t1.jpeg" alt="Vanilla Cake" class="food-image">
+      <div class="item-overlay">
+        <div class="item-details">
+          <div class="food-name">Tshirts</div>
+          <div class="food-price">Rs600</div>
+          <button class="add-to-cart-btn" data-id="vanilla-cake-fit">
+            <i class="fa-solid fa-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="download-section">
+    <div class="download-container">
+      <div class="download-text">
+        <h2>Download the App to Get More Benefits</h2>
+        <p>
+          Join our fitness family today and start your transformative fitness journey,
+          empowering yourself to feel stronger, healthier, and more confident than ever before.
+        </p>
+        <a href="#" class="download-btn">Get the app</a>
+      </div>
+      <div class="download-image">
+        <img src="pic/download__5_-removebg-preview.png" alt="Fitness App Promo">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>Your fitness journey begins here. Join us and transform your body and mind.</p>
+      </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shopping.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+      <div class="footer-section contact">
+        <h2>Contact</h2>
+        <p>Email: info@fitzone.com</p>
+        <p>Phone: +977-123456789</p>
+        <p>Address: Fitness Street, Kathmandu, Nepal</p>
+      </div>
+
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FitZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+      <div class="cart-modal-content">
+          <span class="close-cart-button">&times;</span>
+          <h3>Your Cart</h3>
+          <div id="cart-items-container" class="cart-items-container">
+
+              <p class="empty-cart-message">Your cart is empty.</p>
+          </div>
+          <div class="cart-summary">
+              <p>Total: <span id="total-price">Rs 0</span></p>
+              <button class="checkout-btn">Proceed to Checkout</button>
+          </div>
+      </div>
+  </div>
+
+  <script src="shopping.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rye&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="shopping.js"></script>
+</head>
+<body>
+  <div class="page-container">
+    <header>
+    <div class="logo">
+      <i class="ri-home-3-line"></i> <span class="log">FitLogo</span>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="shopping.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="abt1.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="main">
+      <a href="signup.html">Sign In</a>
+      <a href="#">Register</a>
+      <!-- Cart Icon with Total Items and Total Amount -->
+      <a href="#" class="cart-icon-btn" id="cart-icon-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cart-count">0</span>
+          <span class="cart-amount" id="cart-amount">Rs 0</span>
+      </a>
+      <i class="ri-menu-line" id="menu-icon"></i>
+    </div>
+  </header>
+
+    <div class="hero-section">
+        <video class="bg" autoplay loop muted src="Untitled video - Made with Clipchamp (3).mp4"></video>
+        <div class="Slogan">
+            <p ><span class="name">Pheonix-Fitness-Hub</span></p>
+            <h3>SURPASS YOUR LIMITS</h3>
+<a href="contact.html"><button class="btn">Apply</button></a>
+        </div>
+    </div>
+    
+    <div>
+      <h1 class="plan">Our Plans</h1>
+    </div>
+    <div class="plans-wrapper">
+
+
+          <div class="cardio-strength">
+            <h1 class="font
+            ">Cardio Strength</h1>
+            <p>
+              These activities, like running, cycling, or swimming, 
+              improve your cardiovascular fitness, enabling your heart and lungs to 
+              deliver oxygen more efficiently to working muscles. Cardio builds endurance,
+              reduces the risk of heart disease, and helps manage weight. 
+            </p>
+              <script type="module">
+                  import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+                  hover(".cardio-strength", (element) => {
+                      animate(element, { scale: 1 })
+
+                      return () => animate(element, { scale: 0.9 })
+                  })
+              </script>
+
+          </div>
+
+      <div class="Fat-lose">
+        <h1 class="font">Fat Lose</h1>
+        <p>
+          Losing fat, or shedding excess body fat, is a common goal for many, as it can lead to
+          improved health and well-being. It's generally achieved by creating a calorie deficit, 
+          meaning consuming fewer calories than your body burns, and can be achieved through a 
+          combination of diet and exercise.
+        </p>
+        <script type="module">
+                  import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+                  hover(".Fat-lose", (element) => {
+                      animate(element, { scale: 1 })
+
+                      return () => animate(element, { scale: 0.9 })
+                  })
+              </script>
+      </div>
+
+      <div class="Muscle-gain">
+        <h1 class="font">Muscle Gain</h1>
+        <p>
+          Muscle gain, or muscular hypertrophy, refers to an increase in muscle mass. This is achieved 
+          through a combination of resistance training, proper nutrition, and sufficient rest, allowing 
+          the body to repair and rebuild muscle tissue.
+        </p>
+        <script type="module">
+                  import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+                  hover(".Muscle-gain", (element) => {
+                      animate(element, { scale: 1 })
+
+                      return () => animate(element, { scale: 0.9 })
+                  })
+              </script>
+      </div>
+
+      <div class="nutrition">
+        <h1 class="font">nutrition</h1>
+        <p>
+          It involves consuming a balanced diet containing essential nutrients like protein, carbohydrates,
+           fats, vitamins, and minerals. Good nutrition is crucial for maintaining overall health, preventing 
+           various diseases, and supporting optimal bodily functions throughout life.
+        </p>
+        <script type="module">
+                  import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+                  hover(".nutrition", (element) => {
+                      animate(element, { scale: 1 })
+
+                      return () => animate(element, { scale: 0.9 })
+                  })
+              </script>
+      </div>
+    </div>
+
+    <div class="about-wrapper">
+    <div class="img1">
+      <img src="pic/Gym Interior Projects __ Photos, videos, logos, illustrations and branding.jpeg" alt="a muscular guy">
+    </div>
+    <div class="about-us">
+      <h3><span class="font">ABOUT US</span></h3>
+      <p>
+        Trained by highly professional trainers at a minimal cost, we promise high-value services.
+        We prioritize professionalism in our approach to clients. Our trainers closely monitor your form
+        and safety, ensuring protection as you strive to build your physique.
+        We are committed to your transformation, always putting your safety first — because we care
+        for our fitness enthusiasts like no other hub does!
+      </p>
+    </div>
+    </div>
+
+    <div class="meet">
+    <h1 class="trains">Meet Our Exclusive Trainers For You</h1>
+    </div>
+
+    <div class="trainers">
+      <div class="m1">
+        <div class="m1">
+          
+          <img src="pic/pexels-foadshariyati-32085165.jpg" alt="">
+          <h3 class="mw" >Corey Flick</h3>
+          <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".m1", (element) => {
+                  animate(element, { scale: 1.05 })
+
+                  return () => animate(element, { scale: 1 })
+              })
+          </script>
+
+        </div>
+      </div>
+      <div class="m1">
+        <div class="m1">
+          
+          <img src="pic/pexels-marcuschanmedia-18112396.jpg" alt="">
+          <h3 class="mw">Dane John</h3>
+          <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".box", (element) => {
+                  animate(element, { scale: 1.3 })
+
+                  return () => animate(element, { scale: 1 })
+              })
+          </script>
+        </div>
+        
+      </div>
+      <div class="m1">
+        <div class="m1">
+          <img src="pic/Gym girl💅.jpeg" alt="">
+          <h3 class="mw">Kylie Humble</h3>
+         <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".box", (element) => {
+                  animate(element, { scale: 1.3 })
+
+                  return () => animate(element, { scale: 1 })
+              })
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="features-text">
+        <h1 class="font">Get More With Low Cost Advanced Features</h1>
+        <p>
+          Get More With Low Cost Advanced Features
+          Access Advanced Features Typically Found In Higher-Priced Options, Enjoy Increased
+          Benefits Without The Hefty Price Tag, Maximizing Your Investment. <br>
+          <button class="btnmore">Read more</button>
+        </p>
+      </div>
+        <div class="features-img">
+          <img src="pic/download  (8).JPG" alt="">
+        </div>
+    </div>  
+
+    <div class="smrt">
+      <div class="smrt-img">
+        <img src="pic/download (9).JPG" alt="">
+      </div>
+      <div class="smrt-txt">
+        <h1 class="font">Smart Workout</h1>
+        <p>
+          & Health Metrices
+          Utilizes Technology And Data To Optimize Workout Routines For Efficiency And Effectiveness, 
+          Offers Real-Time Feedback During Workouts To Improve Form, Intensity. <br>
+          <button class="btnmore">Read More</button>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="Supp">
+      <h1>Suppliments For Our Muscle Headed</h1>
+    </div>
+
+    <div class="suppliments">
+      <div class="s1">
+        <div class="s1">
+          <a href="#">
+          <img src="pic/23016.jpg" alt="">
+          <h3 class="pw">Ceratin</h3>
+          </a>
+          <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".s1", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+          </script>
+
+        </div>
+      </div>
+
+
+      <div class="s1">
+        <a href="#">
+        <img src="pic/71VGKI4TWoL-Photoroom (1).jpg" alt="">
+        <h3 class="pw">Beta Alanine</h3>
+        </a>
+      </div>
+      <div class="s2">
+        <a href="#">
+        <img src="pic/Cookies_black_background-Photoroom-Photoroom.jpg" alt="">
+        <h3 class="pw1">Whey Protein</h3>
+        </a>
+        <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".s2", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+          </script>
+      </div>
+    </div>
+  </div>   
+  
+  <section class="fitness-circle-layout">
+
+    <!-- Center Circular Image -->
+    <div class="center-image">
+      <img src="pic/photo-1605296867304-46d5465a13f1.jpeg" alt="Trainer">
+    </div>
+
+    <!-- Steps -->
+    <div class="step step1">
+      <h3>Warm Up</h3>
+      <p>Begin with 5–10 minutes of gentle cardio like walking, jogging, or cycling to warm up and get your blood flowing.</p>
+      <span class="badge">1</span>
+    </div>
+
+    <div class="step step2">
+      <h3>Cardio</h3>
+      <p>Perform 20–30 minutes of moderate to vigorous aerobic activity such as running, cycling, swimming, or dancing.</p>
+      <span class="badge">2</span>
+    </div>
+
+    <div class="step step3">
+      <h3>Strength</h3>
+      <p>Perform 20–30 minutes of resistance training to build muscle and strength using weights or bodyweight.</p>
+      <span class="badge">3</span>
+    </div>
+
+    <div class="step step4">
+      <h3>Cool Down</h3>
+      <p>Conclude with 5–10 minutes of light activity like walking or gentle stretching to cool down and aid recovery.</p>
+      <span class="badge">4</span>
+    </div>
+
+    <div class="step step5">
+      <h3>Rest</h3>
+      <p>Get adequate sleep, stay hydrated, and eat a balanced diet to support your fitness goals and recovery.</p>
+      <span class="badge">5</span>
+    </div>
+
+    <div class="step step6">
+      <h3>Progression</h3>
+      <p>Gradually increase the intensity, duration, or resistance of your workouts as your fitness level improves.</p>
+      <span class="badge">6</span>
+    </div>
+
+  </section>
+
+  <!-- Plans for gym classes -->
+  <h1 class="dollar">Our Classes</h1>
+  <div class="plan-wrapper">
+    <div class="twenty">
+      <h1>20$ Plan</h1>
+        <ul class="list">
+          <li>Unlimited Gym access</li>
+          <li>2x fitness consultant</li>
+          <li>Nutrition tracking</li>
+          <li>3 days per week</li>
+          <button class="btnone">Join Now</button>
+        </ul>
+        <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".twenty", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+          </script>
+    </div>
+
+    <div class="fifty">
+      <h1>50$ Plan</h1>
+        <ul class="list">
+          <li>Unlimited Gym access</li>
+          <li>7x fitness consultant</li>
+          <li>Nutrition tracking</li>
+          <li>3 days per week</li>
+          <li>GYM card</li>
+          <li>Personal Trainer</li>
+          <button class="btntwo">Join Now</button>
+        </ul>
+        <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".fifty", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+          </script>
+    </div>
+
+    <div class="hundred">
+      <h1>100$</h1>
+        <ul class="list">
+          <li>Unlimited Gym access</li>
+          <li>10x fitness consultant</li>
+          <li>Nutrition tracking</li>
+          <li>3 days per week</li>
+          <li>GYM card</li>
+          <li>Personal Trainer</li>
+          <li>All Programs</li>
+          <button class="btnthree">Join Now</button>
+        </ul>
+        <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".hundred", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+          </script>
+    </div>
+
+    <div class="one-fifty">
+      <h1>150$</h1>
+        <ul class="list">
+          <li>Unlimited Gym access</li>
+          <li>17x fitness consultant</li>
+          <li>Nutrition tracking</li>
+          <li>3 days per week</li>
+          <li>GYM card</li>
+          <li>Personal Trainer</li>
+          <li>All Programs</li>
+          <li>Unlimited Caffines</li>
+          <button class="btnfour">Join Now</button>
+        </ul>
+        <script type="module">
+              import { animate, hover } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+              hover(".one-fifty", (element) => {
+                  animate(element, { scale: 1 })
+
+                  return () => animate(element, { scale: 0.9 })
+              })
+        </script>
+    </div>
+
+  </div>
+
+  <section class="download-section">
+  <div class="download-container">
+    <div class="download-text">
+      <h2>Download the App to Get More Benefits</h2>
+      <p>
+        Join our fitness family today and start your transformative fitness journey,
+        empowering yourself to feel stronger, healthier, and more confident than ever before.
+      </p>
+      <a href="#" class="download-btn">Get the app</a>
+    </div>
+    <div class="download-image">
+      <img src="pic/download__5_-removebg-preview.png" alt="Fitness App Promo">
+    </div>
+  </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p>Your fitness journey begins here. Join us and transform your body and mind.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shopping.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h2>Contact</h2>
+      <p>Email: info@fitzone.com</p>
+      <p>Phone: +977-123456789</p>
+      <p>Address: Fitness Street, Kathmandu, Nepal</p>
+    </div>
+
+    <div class="footer-section social">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-line"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 FitZone. All rights reserved.</p>
+  </div>
+</footer>
+    
+
+    
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.querySelector(".navbar");
+
+    menuIcon.onclick = () => {
+      navbar.classList.toggle("active");
+    };
+  </script>
+
+</body>
+</html>
